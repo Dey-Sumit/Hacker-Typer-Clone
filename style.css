@@ -1,0 +1,74 @@
+body {
+    background-color: black;
+    height: 100vh;
+    margin: 0;
+    font-family: monospace;
+}
+
+#container {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+
+}
+
+#source {
+    color: #2AD400;
+    font-size: 15px;
+    font-weight: bold;
+
+    white-space: pre-wrap;
+    /* pre-wrap	Whitespace is preserved by the browser. Text will wrap when necessary, and on line breaks */
+}
+
+.blurred {
+    filter: blur(0.8px);
+}
+
+#access-msg {
+    font-size: 3rem;
+    text-align: center;
+    border: 2px solid;
+    padding: 1.5rem;
+
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+}
+
+.d-none {
+    display: none;
+}
+
+.success {
+    color: #10ff00;
+    display: block;
+    animation: accessAnimation 0.5s 2 0s linear;
+
+}
+
+.denied {
+    color: red;
+    display: block;
+    animation: accessAnimation 0.5s 2 0s linear;
+
+}
+
+
+@keyframes accessAnimation {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
